@@ -1,3 +1,4 @@
+import random
 #1
 # k = 0
 # for i in range(15):
@@ -144,3 +145,106 @@
 #     if i % 5 or i % 7 == 0:
 #         sum += i
 # print(sum)
+
+#11
+random_number = random.randint(1, 9)
+print(f"Случайное число: {random_number}")
+
+product = 1
+found = False
+for i in range(10, 100):
+    if i % 2 != 0 and i % random_number == 0:
+        product *= i
+        found = True
+
+if found:
+    print(f"Произведение двузначных нечетных чисел, кратных {random_number}: {product}")
+else:
+    print(f"Нет двузначных нечетных чисел, кратных {random_number}")
+
+#12
+n = int(input("Введите количество сенокосилок: "))
+n2 = int(input("Введите количество часов работы первой сенокосилки: "))
+
+a = 10 / 60
+
+total_hours = 0
+for i in range(n):
+    total_hours += n2 + i * a
+
+print(f"Общее количество часов, проработанных всей бригадой: {total_hours}")
+
+#13
+count = 0
+total_sum = 0
+
+for i in range(100, 1000):
+    if i % 7 == 0:
+        count += 1
+        total_sum += i
+
+print(f"Количество чисел, кратных 7: {count}")
+print(f"Сумма чисел, кратных 7: {total_sum}")
+
+#15
+for i in range(10):
+    for i in range(10):
+        print(i, end=' ')
+    print()
+
+#16
+for i in range(1, 10):
+    for h in range(9):
+        if h == i - 1:
+            print(i, end=' ')
+        else:
+            print(0, end=' ')
+    print()
+
+#17
+for i in range(1, 10):
+    print(f"2*{i}={2*i}")
+
+#18
+for i in range(20, 50):
+    if i % 3 == 0 and i % 5 != 0:
+        print(i)
+
+#19
+for i in range(35, 87):
+    if i % 7 in (1, 2, 5):
+        print(i)
+
+#29
+for i in range(9): 
+    for h in range(9):
+        if h == 0 or h == i:
+            print('x', end=' ')
+        else:
+            print('0', end=' ')
+    print()
+
+#30
+M = random.randint(1, 100)
+N = random.randint(1, 100)
+
+print(f"Сгенерированные числа: M = {M}, N = {N}")
+
+if N > M:
+    print("Последовательность от N к M:")
+    for i in range(N, M - 1, -1):
+        print(i)
+else:
+    print("Последовательность от N к M:")
+    for i in range(N, M + 1):
+        print(i)
+
+print()
+if M > N:
+    print("Последовательность от M к N:")
+    for i in range(M, N - 1, -1):
+        print(i)
+else:
+    print("Последовательность от M к N:")
+    for i in range(M, N + 1):
+        print(i)
