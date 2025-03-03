@@ -52,7 +52,7 @@ for i in range(primeri):
         else:
             print(f"Неправильно. Правильный ответ: {correct_answer}")
     except ValueError:
-        print("Пожалуйста, введите правильное число.")
+        print("Пожалуйста введите правильное число.")
 
 score = (correct_primeri / primeri) * 100
 
